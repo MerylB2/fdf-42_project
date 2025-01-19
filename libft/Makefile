@@ -3,15 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cmetee-b <cmetee-b@student.42.fr>          +#+  +:+       +#+         #
+#    By: asiatik <asiatik@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/28 16:25:10 by cmetee-b          #+#    #+#              #
-#    Updated: 2024/11/28 16:25:30 by cmetee-b         ###   ########.fr        #
+#    Updated: 2025/01/19 22:18:18 by asiatik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #les_variables
 NAME = libft.a
+#ajouter printf ici et refaire le makefile en condition
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
