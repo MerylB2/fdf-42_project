@@ -6,7 +6,7 @@
 #    By: asiatik <asiatik@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 14:51:14 by cmetee-b          #+#    #+#              #
-#    Updated: 2025/01/14 22:39:39 by asiatik          ###   ########.fr        #
+#    Updated: 2025/01/19 21:54:02 by asiatik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ CFLAGS = -Wall -Wextra -Werror
 MLXFLAGS = -lmlx -lX11 -lXext -lm 
 
 #les_fichiers
-SRCS = fdf.c map_reader.c fdf_utils.c draw.c \
+SRCS = fdf.c \
+		fdf_parsing.c \
+		fdf_utils.c \
+		draw.c \
+		fdf_events.c
 
 OBJS = $(SRCS:.c=.o)
 
