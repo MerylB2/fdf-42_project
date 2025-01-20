@@ -6,14 +6,13 @@
 /*   By: asiatik <asiatik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 14:18:02 by cmetee-b          #+#    #+#             */
-/*   Updated: 2025/01/14 22:33:44 by asiatik          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:30:55 by asiatik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include "get_next_line.h"
-
-int	ft_strlen(char *str)
+int	ft_strlengnl(char *str)
 {
 	int	len;
 
@@ -26,7 +25,7 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-char	*find_char(const char *s, int c)
+char	*find_chargnl(const char *s, int c)
 {
 	if (!s)
 		return (NULL);
@@ -37,7 +36,7 @@ char	*find_char(const char *s, int c)
 	return (NULL);
 }
 
-char	*ft_strjoin(char *str1, char *str2)
+char	*ft_strjoingnl(char *str1, char *str2)
 {
 	char	*res;
 	char	*p_str1;

@@ -6,11 +6,11 @@
 /*   By: asiatik <asiatik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 14:18:08 by cmetee-b          #+#    #+#             */
-/*   Updated: 2025/01/14 22:34:00 by asiatik          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:30:56 by asiatik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 #include "fcntl.h"
 #include "stdio.h"
 
@@ -23,7 +23,7 @@ char	*read_file_from_fd(char *s, int fd)
 	if (!buffer)
 		return (NULL);
 	bytes_read = 1;
-	while (!find_char(s, '\n') && bytes_read > 0)
+	while (!find_chargnl(s, '\n') && bytes_read > 0)
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
@@ -33,7 +33,7 @@ char	*read_file_from_fd(char *s, int fd)
 			return (NULL);
 		}
 		buffer[bytes_read] = '\0';
-		s = ft_strjoin(s, buffer);
+		s = ft_strjoingnl(s, buffer);
 	}
 	return (free(buffer), s);
 }
@@ -80,7 +80,7 @@ char	*clean_line(char *str)
 		free(str);
 		return (NULL);
 	}
-	nline_pos = malloc(sizeof(char) * (ft_strlen(str) - i + 1));
+	nline_pos = malloc(sizeof(char) * (ft_strlengnl(str) - i + 1));
 	if (!nline_pos)
 	{
 		free(nline_pos);

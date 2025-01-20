@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cmetee-b <cmetee-b@student.42.fr>          +#+  +:+       +#+        */
+/*   By: asiatik <asiatik@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 16:11:23 by cmetee-b          #+#    #+#             */
-/*   Updated: 2024/11/28 16:11:44 by cmetee-b         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:22:13 by asiatik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,17 @@
 # include <stdint.h>
 # include <limits.h>
 # include <stddef.h>
+
+/* fonction get_next_line */
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE  42
+
+# endif
+
+char	*get_next_line(int fd);
+int		ft_strlengnl(char *s);
+char	*find_chargnl(const char *s, int c);
+char	*ft_strjoingnl(char *str1, char *str2);
 
 /* fonctions de la LIBC*/
 char	*ft_strnstr(const char *big, const char *little, size_t len);
@@ -63,7 +74,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-/* FOnctions Bonus : struct listes chainees */
+/* Fonctions Bonus : struct listes chainees */
 typedef struct s_list
 {
 	void			*content;
